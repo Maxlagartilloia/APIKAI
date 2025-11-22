@@ -50,10 +50,12 @@
   <header class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur border-b border-cyan-500/40">
     <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <div class="flex items-center gap-3">
-        <!-- Logo simple / placeholder -->
-        <div class="w-10 h-10 rounded-full bg-cyan-400 flex items-center justify-center text-xl font-extrabold text-slate-900">
-          A
-        </div>
+        <!-- LOGO -->
+        <img
+          src="apikai-logo.png"
+          alt="Logo Apikai Lodge"
+          class="w-12 h-12 object-contain rounded-full bg-slate-900 border border-cyan-400/60"
+        />
         <div>
           <p class="font-bold text-lg leading-tight">Apikai Lodge</p>
           <p class="text-[11px] text-cyan-300 uppercase tracking-[0.18em]">
@@ -402,11 +404,10 @@
         name="reservas-apikai"
         method="POST"
         data-netlify="true"
+        action="/gracias.html"
         class="space-y-4 bg-slate-900/80 p-6 rounded-lg shadow-lg border border-cyan-500/40"
       >
         <input type="hidden" name="form-name" value="reservas-apikai">
-        <!-- Redirección a página de gracias -->
-        <input type="hidden" name="redirect" value="/gracias.html">
 
         <p class="hidden">
           <label>No llenar este campo: <input name="bot-field" /></label>
