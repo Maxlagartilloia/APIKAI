@@ -3,40 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apikai Lodge | Parque acuático, eventos y diversión</title>
+  <title>Apikai Lodge | Diversión, piscina y eventos</title>
 
   <!-- SEO básico -->
-  <meta name="description" content="Apikai Lodge: complejo turístico con piscinas, hidromasaje, coliseo para 300 personas, cevichería, restaurante y bar deportivo. Eventos con Gaby Garzón Eventos. Reserva tu próxima experiencia.">
+  <meta name="description" content="Apikai Lodge: centro turístico tipo parque acuático con piscinas, hidromasaje, cevichería, restaurante, bar deportivo y coliseo para 300 personas. Eventos con Gaby Garzón Eventos.">
   <meta name="author" content="Apikai Lodge & Gaby Garzón Eventos">
+
+  <!-- Google Fonts estilo caricatura -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Estilos fiesta -->
+  <!-- Estilos cartoon -->
   <style>
     :root {
-      --fiesta-rosa: #ff2e9f;
-      --fiesta-amarillo: #ffd600;
-      --fiesta-naranja: #ff6a00;
-      --fiesta-cian: #00f0ff;
-      --fiesta-azul: #07152a;
+      --rosa: #ff5fa8;
+      --amarillo: #ffd65a;
+      --naranja: #ff9b4a;
+      --azul: #4cc2ff;
+      --verde: #6ee7b7;
+      --azul-fondo: #02101f;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #321a6b 0, #04111f 45%, #020617 100%);
+      font-family: "Baloo 2", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #173a63 0, var(--azul-fondo) 40%, #020617 100%);
       color: #f9fafb;
     }
 
     .hero-bg {
       background-image:
-        radial-gradient(circle at 0% 0%, rgba(255, 214, 0, 0.35), transparent 55%),
-        radial-gradient(circle at 100% 0%, rgba(0, 240, 255, 0.35), transparent 55%),
-        radial-gradient(circle at 0% 100%, rgba(255, 42, 159, 0.4), transparent 55%),
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.75)),
+        radial-gradient(circle at 0% 0%, rgba(255, 214, 90, 0.4), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(76, 194, 255, 0.35), transparent 60%),
+        linear-gradient(180deg, rgba(2, 6, 23, 0.3), rgba(2, 6, 23, 0.75)),
         url("apikai-hero.jpg");
       background-size: cover;
       background-position: center;
+    }
+
+    .nav-blur {
+      backdrop-filter: blur(14px);
+      background: rgba(2, 6, 23, 0.9);
+      border-bottom: 2px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .card-gomita {
+      background: linear-gradient(145deg, #050a1f, #050816);
+      border-radius: 26px;
+      border: 2px solid rgba(148, 163, 184, 0.4);
+      box-shadow:
+        0 16px 40px rgba(15, 23, 42, 0.9),
+        0 0 0 3px rgba(15, 23, 42, 0.8) inset;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.7);
+    }
+
+    .btn-pill {
+      border-radius: 999px;
+      padding: 0.8rem 1.6rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    .btn-primario {
+      background: linear-gradient(135deg, var(--amarillo), var(--naranja));
+      color: #0f172a;
+      box-shadow:
+        0 14px 30px rgba(248, 181, 75, 0.8),
+        0 0 0 3px rgba(15, 23, 42, 0.7);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+
+    .btn-primario:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.04);
+      box-shadow:
+        0 18px 40px rgba(248, 181, 75, 0.98),
+        0 0 0 3px rgba(15, 23, 42, 0.9);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--azul);
+      color: #e0f2fe;
+      background: rgba(15, 23, 42, 0.8);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(37, 99, 235, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .section-soft {
+      background: radial-gradient(circle at 0% 0%, rgba(255, 214, 90, 0.16), transparent 60%),
+                  radial-gradient(circle at 100% 100%, rgba(110, 231, 183, 0.14), transparent 60%),
+                  #020617;
+    }
+
+    .gallery-img {
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.95);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    }
+
+    .gallery-img:hover {
+      transform: translateY(-4px) rotate(-1deg);
+      box-shadow: 0 22px 50px rgba(15, 23, 42, 1);
+      filter: brightness(1.05);
     }
 
     .whatsapp-floating {
@@ -46,206 +134,141 @@
       z-index: 50;
     }
 
-    .chips span {
-      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.5);
-    }
-
-    .galeria-grid img {
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .galeria-grid img:hover {
-      transform: scale(1.05) rotate(-1deg);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    .fiesta-card {
-      background: radial-gradient(circle at top left, rgba(255, 214, 0, 0.18), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(0, 240, 255, 0.18), transparent 55%),
-                  #020617ee;
-      border-image: linear-gradient(135deg, var(--fiesta-rosa), var(--fiesta-amarillo), var(--fiesta-cian)) 1;
-      border-width: 1px;
-      border-style: solid;
-    }
-
-    .fiesta-badge {
-      background: linear-gradient(135deg, var(--fiesta-amarillo), var(--fiesta-naranja));
-      box-shadow: 0 12px 30px rgba(255, 214, 0, 0.65);
-    }
-
-    .btn-fiesta-primary {
-      background: linear-gradient(135deg, var(--fiesta-amarillo), var(--fiesta-naranja));
-      box-shadow: 0 14px 35px rgba(255, 106, 0, 0.75);
-    }
-
-    .btn-fiesta-primary:hover {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
-    }
-
-    .btn-fiesta-outline {
-      border: 2px solid var(--fiesta-cian);
-      box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
-    }
-
-    .btn-fiesta-outline:hover {
-      background: rgba(0, 240, 255, 0.08);
-    }
-
-    .seccion-gradiente {
-      background-image:
-        radial-gradient(circle at 0% 0%, rgba(255, 214, 0, 0.12), transparent 60%),
-        radial-gradient(circle at 100% 100%, rgba(0, 240, 255, 0.09), transparent 60%),
-        linear-gradient(180deg, #020617, #020617);
-    }
-
-    .nav-glow {
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.75);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.5);
-    }
-
-    .confetti-dot {
-      position: fixed;
-      width: 6px;
-      height: 6px;
+    .whatsapp-btn {
+      width: 3.3rem;
+      height: 3.3rem;
       border-radius: 999px;
-      background: var(--fiesta-amarillo);
-      opacity: 0.85;
-      z-index: 0;
-      animation: float 12s linear infinite;
+      background: #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 16px 40px rgba(22, 163, 74, 0.9);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    @keyframes float {
-      0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-      10% { opacity: 1; }
-      100% { transform: translateY(-10vh) translateX(30px); opacity: 0; }
+    .whatsapp-btn:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 20px 45px rgba(22, 163, 74, 1);
     }
   </style>
 </head>
 <body class="text-slate-50">
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur nav-glow">
+  <header class="sticky top-0 z-40 nav-blur">
     <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <div class="flex items-center gap-3">
-        <!-- LOGO -->
-        <img
-          src="apikai-logo.png"
-          alt="Logo Apikai Lodge"
-          class="w-12 h-12 object-contain rounded-full bg-slate-900 border border-cyan-400/60"
-        />
+        <div class="rounded-full bg-slate-900 p-1.5 border-2 border-sky-400">
+          <img
+            src="apikai-logo.png"
+            alt="Logo Apikai Lodge"
+            class="w-10 h-10 md:w-12 md:h-12 object-contain rounded-full"
+          />
+        </div>
         <div>
-          <p class="font-bold text-lg leading-tight">Apikai Lodge</p>
-          <p class="text-[11px] text-cyan-300 uppercase tracking-[0.18em]">
+          <p class="font-extrabold text-lg leading-tight">Apikai Lodge</p>
+          <p class="text-[11px] text-sky-300 uppercase tracking-[0.18em]">
             Parque acuático · Eventos
           </p>
         </div>
       </div>
 
-      <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
-        <a href="#inicio" class="hover:text-cyan-300">Inicio</a>
-        <a href="#experiencias" class="hover:text-cyan-300">Experiencias</a>
-        <a href="#restaurante" class="hover:text-cyan-300">Restaurante & Bar</a>
-        <a href="#galeria" class="hover:text-cyan-300">Galería</a>
-        <a href="#juego" class="hover:text-cyan-300">Juego</a>
-        <a href="#reservas" class="hover:text-cyan-300 text-amber-300">Reservas</a>
-        <a href="#contacto" class="hover:text-cyan-300">Contacto</a>
+      <div class="hidden md:flex items-center gap-5 text-[13px] font-semibold">
+        <a href="#inicio" class="hover:text-sky-300">Inicio</a>
+        <a href="#experiencias" class="hover:text-sky-300">Experiencias</a>
+        <a href="#restaurante" class="hover:text-sky-300">Restaurante & Bar</a>
+        <a href="#galeria" class="hover:text-sky-300">Galería</a>
+        <a href="#juego" class="hover:text-sky-300">Juego</a>
+        <a href="#reservas" class="hover:text-sky-300 text-yellow-300">Reservas</a>
       </div>
 
       <a
         href="#reservas"
-        class="hidden md:inline-flex btn-fiesta-primary text-slate-900 font-extrabold text-xs px-4 py-2 rounded-full uppercase tracking-[0.16em] transition-transform"
+        class="hidden md:inline-flex btn-pill btn-primario"
       >
-        ¡Reservar ahora!
+        ¡Reservar!
       </a>
 
-      <!-- Botón simple mobile -->
-      <a href="#reservas" class="md:hidden text-xs border border-cyan-400 px-3 py-1 rounded-full bg-slate-900/80">
+      <a href="#reservas" class="md:hidden text-[11px] border border-sky-400 px-3 py-1 rounded-full bg-slate-900/80">
         Reservar
       </a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section id="inicio" class="hero-bg text-white relative overflow-hidden">
-    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center gap-10 relative z-10">
+  <section id="inicio" class="hero-bg relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20 flex flex-col md:flex-row items-center gap-10">
       <!-- Texto -->
       <div class="md:w-1/2 space-y-6">
-        <div class="inline-flex fiesta-badge px-4 py-1 rounded-full text-[11px] font-black uppercase tracking-[0.25em] text-slate-900">
-          ¡DÍA DE PISCINA · EVENTOS · FULL FIESTA!
+        <div class="inline-flex chip bg-emerald-300 text-slate-900">
+          <span>💦 Piscinas</span> · <span>🎉 Eventos</span> · <span>🍤 Comida rica</span>
         </div>
 
-        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-[0_12px_40px_rgba(0,0,0,0.9)]">
-          El parque acuático donde tu grupo
-          <span class="text-yellow-300">grita de felicidad</span>
-          y se queda con
-          <span class="text-cyan-300">recuerdos épicos</span>.
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
+          El <span class="text-yellow-300">parque acuático</span>
+          donde tus fiestas y paseos se vuelven
+          <span class="text-sky-300">caricatura de felicidad</span>.
         </h1>
 
-        <p class="text-sm md:text-base text-cyan-100/95 max-w-xl">
-          Piscinas, hidromasaje, coliseo para 300 personas, cevichería, restaurante, bar deportivo y
-          <span class="font-semibold text-yellow-300">decoraciones brutales con Gaby Garzón Eventos</span>.
-          Un solo lugar para tardes de piscina, campeonatos, fiestas, conciertos y lo que se te ocurra.
+        <p class="text-sm md:text-base text-sky-100/95 max-w-xl">
+          Apikai Lodge es un centro turístico con piscinas, hidromasaje, áreas deportivas,
+          cevichería, restaurante, bar deportivo y coliseo para 300 personas.  
+          Todo decorado y organizado al estilo <span class="font-semibold text-amber-300">Gaby Garzón Eventos</span>,
+          para que tu grupo viva un día de película.
         </p>
 
         <div class="flex flex-wrap gap-3">
-          <a
-            href="#reservas"
-            class="btn-fiesta-primary text-slate-900 font-extrabold px-5 py-3 rounded-full text-sm md:text-base uppercase tracking-[0.12em] transition-transform"
-          >
-            Reservar mi fecha 🔥
+          <a href="#reservas" class="btn-pill btn-primario">
+            Reservar mi fecha 🤩
           </a>
-          <a
-            href="#galeria"
-            class="btn-fiesta-outline text-cyan-100 font-semibold px-5 py-3 rounded-full text-sm md:text-base bg-slate-950/60"
-          >
-            Ver fotos del parque 📸
+          <a href="#galeria" class="btn-pill btn-outline">
+            Ver fotos 📸
           </a>
           <a
             href="#juego"
-            class="bg-pink-500/90 hover:bg-pink-400 text-white font-semibold px-5 py-3 rounded-full text-sm md:text-base shadow-lg shadow-pink-500/50"
+            class="btn-pill bg-rose-500/95 text-white shadow-lg shadow-rose-500/60 hover:bg-rose-400"
           >
-            Jugar mi plan ideal 🎮
+            Jugar mi plan 🎮
           </a>
         </div>
 
-        <div class="chips flex flex-wrap gap-2 text-[11px] md:text-xs text-slate-900 font-semibold">
-          <span class="bg-cyan-300/95 px-3 py-1 rounded-full">Piscinas & hidromasaje 💧</span>
-          <span class="bg-emerald-300/95 px-3 py-1 rounded-full">Áreas deportivas ⚽</span>
-          <span class="bg-yellow-300/95 px-3 py-1 rounded-full">Coliseo 300 pax 🏟️</span>
-          <span class="bg-pink-400/95 px-3 py-1 rounded-full">Eventos con Gaby Garzón 🎉</span>
+        <div class="flex flex-wrap gap-2 text-[11px] md:text-xs text-slate-900 font-semibold mt-1">
+          <span class="chip bg-sky-300/95">Piscinas & hidromasaje</span>
+          <span class="chip bg-emerald-300/95">Áreas deportivas</span>
+          <span class="chip bg-amber-300/95">Coliseo 300 personas</span>
+          <span class="chip bg-rose-300/95">Decoraciones Gaby Garzón</span>
         </div>
       </div>
 
       <!-- Tarjeta info rápida -->
       <div class="md:w-1/2">
-        <div class="fiesta-card rounded-2xl p-6 md:p-8 shadow-[0_18px_45px_rgba(0,0,0,0.9)] space-y-5">
+        <div class="card-gomita p-6 md:p-8 space-y-5">
           <h2 class="text-xl md:text-2xl font-extrabold mb-1 text-amber-300">
-            Arma tu día perfecto en Apikai 🥳
+            Arma tu día de parque en Apikai 🎡
           </h2>
-          <p class="text-sm text-cyan-100/95">
-            Tarde de piscina con ceviches, campeonato relámpago, fiesta infantil, concierto o mega evento:
-            tú traes la gente, nosotros ponemos el complejo y los detalles locos.
+          <p class="text-sm text-sky-100/95">
+            Tarde de piscina con ceviches, campeonato relámpago, cumpleaños, paseo escolar,
+            retiro de iglesia o concierto grande: tú traes a la gente y nosotros ponemos el show completo.
           </p>
 
-          <ul class="space-y-2 text-sm text-cyan-100">
-            <li>💦 Piscinas, toques de hidromasaje y zonas para fotos</li>
-            <li>⚽ Áreas deportivas para campeonatos & dinámicas</li>
-            <li>🏟️ Coliseo techado para ~300 personas</li>
-            <li>🍤 Cevichería, restaurante y snacks para el antojo</li>
-            <li>🍻 Bar deportivo para ver el partido con tu barra</li>
-            <li>🎈 Decoración y producción con Gaby Garzón Eventos</li>
+          <ul class="space-y-2 text-sm text-sky-100">
+            <li>💧 Piscinas y zona de hidromasaje para relajarse y jugar.</li>
+            <li>⚽ Áreas deportivas para campeonatos y actividades en equipo.</li>
+            <li>🏟️ Coliseo techado para ~300 personas, ideal para eventos masivos.</li>
+            <li>🍤 Cevichería, restaurante y snacks para que nadie se quede con hambre.</li>
+            <li>🍻 Bar deportivo para ver el partido con pantalla y buena vibra.</li>
+            <li>🎈 Decoración y producción con Gaby Garzón Eventos (desde fiestas infantiles hasta shows grandes).</li>
           </ul>
 
           <a
             href="#reservas"
-            class="block text-center btn-fiesta-primary text-slate-900 font-extrabold px-5 py-3 rounded-full text-sm md:text-base uppercase tracking-[0.12em] transition-transform"
+            class="btn-pill btn-primario block text-center"
           >
-            Enviar solicitud de reserva ahora 💥
+            Enviar solicitud de reserva ✉️
           </a>
 
-          <p class="text-[11px] text-cyan-200/90 text-center">
-            Te respondemos por WhatsApp para armar un paquete a tu medida.  
-            <span class="text-amber-300 font-semibold">Entre más nos cuentes, más épico lo hacemos.</span>
+          <p class="text-[11px] text-sky-200/90 text-center">
+            Te respondemos por WhatsApp para ajustar horarios, presupuesto y detalles de tu experiencia.
           </p>
         </div>
       </div>
@@ -253,66 +276,66 @@
   </section>
 
   <!-- EXPERIENCIAS -->
-  <section id="experiencias" class="py-14 seccion-gradiente">
+  <section id="experiencias" class="py-14 section-soft">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold text-center mb-2">Todo lo que puedes vivir en Apikai 🎡</h2>
-      <p class="text-sm md:text-base text-cyan-100/80 text-center mb-8 max-w-2xl mx-auto">
-        No es solo una piscina. Es el punto de encuentro para familia, amigos, escuelas, iglesias y empresas
-        que quieren un día diferente, lleno de juegos y buena vibra.
+      <h2 class="text-3xl font-extrabold text-center mb-2">¿Qué puedes hacer en Apikai? 🏖️</h2>
+      <p class="text-sm md:text-base text-sky-100/80 text-center mb-8 max-w-2xl mx-auto">
+        Piensa en Apikai como un parque de juegos acuático + estadio + restaurante, todo en uno.
+        Aquí algunas ideas de planes que puedes reservar.
       </p>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <article class="fiesta-card rounded-xl p-5 flex flex-col">
+        <article class="card-gomita p-5 flex flex-col">
           <img
             src="apikai-piscinas.jpg"
-            alt="Piscinas y diversión en Apikai"
-            class="rounded-lg mb-4 h-44 w-full object-cover"
+            alt="Piscinas Apikai"
+            class="rounded-3xl mb-4 h-44 w-full object-cover shadow-xl"
           />
-          <h3 class="font-semibold text-lg mb-1 text-cyan-100">Tardes de piscina & relax</h3>
-          <p class="text-sm text-cyan-100/85 mb-3">
-            Piscinas, hidromasaje y espacios para broncearse, tomar fotos y disfrutar con familia o panas.
+          <h3 class="font-semibold text-lg mb-1 text-sky-100">Tardes de piscina y relax</h3>
+          <p class="text-sm text-sky-100/85 mb-3">
+            Piscinas, hidromasaje, flotadores, risas y fotos por todos lados. Perfecto para familia, panas y grupos juveniles.
           </p>
-          <p class="text-xs text-cyan-300 mb-4">
-            Ideal para cumpleaños, grupos juveniles, reencuentros y celebraciones espontáneas.
+          <p class="text-xs text-sky-300 mb-4">
+            Cumpleaños, reuniones familiares, despedidas, reencuentros… tú escoges el motivo.
           </p>
           <a href="#reservas" class="mt-auto text-sm text-amber-300 hover:text-amber-100 underline">
-            Reservar mi tarde de piscina →
+            Reservar tarde de piscina →
           </a>
         </article>
 
-        <article class="fiesta-card rounded-xl p-5 flex flex-col">
+        <article class="card-gomita p-5 flex flex-col">
           <img
             src="apikai-deportes.jpg"
-            alt="Áreas deportivas Apikai"
-            class="rounded-lg mb-4 h-44 w-full object-cover"
+            alt="Deportes Apikai"
+            class="rounded-3xl mb-4 h-44 w-full object-cover shadow-xl"
           />
           <h3 class="font-semibold text-lg mb-1 text-emerald-200">Deportes, juegos y campeonatos</h3>
-          <p class="text-sm text-cyan-100/85 mb-3">
-            Canchas y áreas deportivas para campeonatos, integraciones, gincanas y actividades recreativas.
+          <p class="text-sm text-sky-100/85 mb-3">
+            Canchas y áreas deportivas para campeonatos, gincanas, integraciones y dinámicas de equipo.
           </p>
           <p class="text-xs text-emerald-300 mb-4">
-            Empresas, escuelas, iglesias y clubes deportivos bienvenidos.
+            Ideal para escuelas, colegios, empresas, iglesias y clubes deportivos.
           </p>
           <a href="#reservas" class="mt-auto text-sm text-emerald-300 hover:text-emerald-100 underline">
-            Armar mi actividad deportiva →
+            Armar actividad deportiva →
           </a>
         </article>
 
-        <article class="fiesta-card rounded-xl p-5 flex flex-col">
+        <article class="card-gomita p-5 flex flex-col">
           <img
             src="apikai-coliseo.jpg"
-            alt="Coliseo Apikai para eventos"
-            class="rounded-lg mb-4 h-44 w-full object-cover"
+            alt="Coliseo Apikai"
+            class="rounded-3xl mb-4 h-44 w-full object-cover shadow-xl"
           />
-          <h3 class="font-semibold text-lg mb-1 text-pink-200">Eventos grandes & shows</h3>
-          <p class="text-sm text-cyan-100/85 mb-3">
-            Coliseo techado para ~300 personas: conciertos, festivales, graduaciones, congresos y más.
+          <h3 class="font-semibold text-lg mb-1 text-rose-200">Eventos grandes & shows</h3>
+          <p class="text-sm text-sky-100/85 mb-3">
+            Coliseo techado para ~300 personas: conciertos, festivales, graduaciones, congresos, ferias y más.
           </p>
-          <p class="text-xs text-pink-300 mb-4">
-            Producción y decoración completa con <strong>Gaby Garzón Eventos</strong>.
+          <p class="text-xs text-rose-300 mb-4">
+            Todo con decoración y producción de <strong>Gaby Garzón Eventos</strong>.
           </p>
-          <a href="#reservas" class="mt-auto text-sm text-pink-300 hover:text-pink-100 underline">
-            Cotizar mi mega evento →
+          <a href="#reservas" class="mt-auto text-sm text-rose-300 hover:text-rose-100 underline">
+            Cotizar un mega evento →
           </a>
         </article>
       </div>
@@ -320,83 +343,83 @@
   </section>
 
   <!-- RESTAURANTE & BAR -->
-  <section id="restaurante" class="py-14 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+  <section id="restaurante" class="py-14 bg-slate-950">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex flex-col md:flex-row gap-8 items-center mb-10">
         <div class="md:w-1/2 space-y-4">
-          <h2 class="text-3xl font-extrabold mb-1 text-amber-300">Cevichería, restaurante & bar deportivo 😋</h2>
-          <p class="text-sm md:text-base text-cyan-100/85">
-            Un buen día de parque necesita buena comida.  
-            En Apikai tienes ceviches, platos fuertes, snacks y un bar deportivo para
-            ver el partido mientras tu gente disfruta.
+          <h2 class="text-3xl font-extrabold mb-1 text-amber-300">
+            Cevichería, restaurante & bar deportivo 😋
+          </h2>
+          <p class="text-sm md:text-base text-sky-100/85">
+            Porque nadie se divierte con el estómago vacío, en Apikai tienes ceviches, platos fuertes, snacks
+            y un bar deportivo para ver el partido mientras el grupo sigue en modo fiesta.
           </p>
-          <ul class="text-sm text-cyan-100/90 space-y-2">
-            <li>🍤 Ceviches y mariscos para recargar energía</li>
-            <li>🍽️ Platos a la carta y menús para grupos</li>
-            <li>🍟 Snacks y bocaditos para eventos y fiestas</li>
-            <li>🍹 Bar deportivo para ver fútbol y celebrar con tu barra</li>
+          <ul class="text-sm text-sky-100/90 space-y-2">
+            <li>🍤 Ceviches y mariscos fresquitos.</li>
+            <li>🍽️ Platos a la carta y menús para grupos grandes.</li>
+            <li>🍟 Snacks y bocaditos ideales para eventos.</li>
+            <li>🍹 Bar deportivo para celebrar cada gol.</li>
           </ul>
           <a
             href="#reservas"
-            class="inline-flex mt-3 btn-fiesta-primary text-slate-900 font-extrabold px-5 py-3 rounded-full text-sm md:text-base uppercase tracking-[0.12em] transition-transform"
+            class="btn-pill btn-primario inline-flex mt-3"
           >
-            Quiero mi evento con comida incluida 🍤
+            Quiero evento con comida 🍤
           </a>
         </div>
 
         <div class="md:w-1/2 grid grid-cols-2 gap-4">
-          <img src="apikai-ceviches.jpg" alt="Cevichería Apikai" class="rounded-xl h-36 w-full object-cover shadow-lg">
-          <img src="apikai-bar.jpg" alt="Bar deportivo Apikai" class="rounded-xl h-36 w-full object-cover shadow-lg">
-          <img src="apikai-restaurant.jpg" alt="Restaurante Apikai" class="rounded-xl h-36 w-full object-cover shadow-lg">
-          <img src="apikai-snacks.jpg" alt="Snacks Apikai" class="rounded-xl h-36 w-full object-cover shadow-lg">
+          <img src="apikai-ceviches.jpg" alt="Cevichería Apikai" class="gallery-img h-36 w-full object-cover">
+          <img src="apikai-bar.jpg" alt="Bar deportivo Apikai" class="gallery-img h-36 w-full object-cover">
+          <img src="apikai-restaurant.jpg" alt="Restaurante Apikai" class="gallery-img h-36 w-full object-cover">
+          <img src="apikai-snacks.jpg" alt="Snacks Apikai" class="gallery-img h-36 w-full object-cover">
         </div>
       </div>
     </div>
   </section>
 
   <!-- GALERÍA -->
-  <section id="galeria" class="py-14 seccion-gradiente">
+  <section id="galeria" class="py-14 section-soft">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-extrabold text-center mb-2">Galería de momentos Apikai 📸</h2>
-      <p class="text-sm md:text-base text-cyan-100/80 text-center mb-8 max-w-2xl mx-auto">
-        Mira algunos de los días de piscina, torneos, eventos y fiestas que ya se han vivido en el complejo.
-        Aquí es donde la gente sonríe de verdad.
+      <p class="text-sm md:text-base text-sky-100/80 text-center mb-8 max-w-2xl mx-auto">
+        Una pequeña muestra de días de piscina, torneos, eventos y decoraciones que ya se han vivido en el complejo.
       </p>
 
-      <div class="galeria-grid grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-        <img src="apikai-galeria-1.jpg" alt="Foto 1 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
-        <img src="apikai-galeria-2.jpg" alt="Foto 2 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
-        <img src="apikai-galeria-3.jpg" alt="Foto 3 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
-        <img src="apikai-galeria-4.jpg" alt="Foto 4 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
-        <img src="apikai-galeria-5.jpg" alt="Foto 5 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
-        <img src="apikai-galeria-6.jpg" alt="Foto 6 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
-        <img src="apikai-galeria-7.jpg" alt="Foto 7 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
-        <img src="apikai-galeria-8.jpg" alt="Foto 8 Apikai" class="rounded-lg h-32 md:h-40 w-full object-cover">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+        <img src="apikai-galeria-1.jpg" alt="Foto 1 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
+        <img src="apikai-galeria-2.jpg" alt="Foto 2 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
+        <img src="apikai-galeria-3.jpg" alt="Foto 3 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
+        <img src="apikai-galeria-4.jpg" alt="Foto 4 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
+        <img src="apikai-galeria-5.jpg" alt="Foto 5 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
+        <img src="apikai-galeria-6.jpg" alt="Foto 6 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
+        <img src="apikai-galeria-7.jpg" alt="Foto 7 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
+        <img src="apikai-galeria-8.jpg" alt="Foto 8 Apikai" class="gallery-img h-32 md:h-40 w-full object-cover">
       </div>
 
-      <p class="text-[11px] md:text-xs text-center text-cyan-300 mt-4">
-        (Reemplaza estas fotos por tus mejores tomas de piscina, eventos y decoraciones de Gaby Garzón Eventos.)
+      <p class="text-[11px] md:text-xs text-center text-sky-300 mt-4">
+        (Reemplaza estas fotos por tus mejores tomas del centro turístico y de Gaby Garzón Eventos.)
       </p>
     </div>
   </section>
 
   <!-- JUEGO / QUIZ -->
-  <section id="juego" class="py-14 bg-gradient-to-b from-slate-900 to-slate-950">
+  <section id="juego" class="py-14 bg-slate-950">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-extrabold text-center mb-2">Juego rápido: ¿Qué tipo de plan Apikai eres? 🎮</h2>
-      <p class="text-sm md:text-base text-cyan-100/80 text-center mb-6 max-w-2xl mx-auto">
-        Responde este mini quiz y te decimos qué tipo de experiencia te queda mejor.
-        Al final tendrás un código para usar en tu reserva.
+      <h2 class="text-3xl font-extrabold text-center mb-2">Juego: ¿Qué tipo de plan Apikai eres? 🎮</h2>
+      <p class="text-sm md:text-base text-sky-100/80 text-center mb-6 max-w-2xl mx-auto">
+        Responde este mini quiz y te diremos qué experiencia te queda mejor.
+        Al final tendrás un código para escribir en la reserva.
       </p>
 
-      <div class="fiesta-card rounded-2xl p-6 md:p-8 space-y-6">
+      <div class="card-gomita p-6 md:p-8 space-y-6">
         <div>
-          <p class="font-semibold mb-2 text-cyan-100">
+          <p class="font-semibold mb-2 text-sky-100">
             1. ¿Con quién vienes principalmente a Apikai?
           </p>
-          <div class="space-y-2 text-sm text-cyan-100">
+          <div class="space-y-2 text-sm text-sky-100">
             <label class="flex gap-2 items-center">
-              <input type="radio" name="q1" value="familia" class="text-cyan-500" />
+              <input type="radio" name="q1" value="familia" class="text-sky-500" />
               <span>Con mi familia y niños 👨‍👩‍👧‍👦</span>
             </label>
             <label class="flex gap-2 items-center">
@@ -419,10 +442,10 @@
         </div>
 
         <div>
-          <p class="font-semibold mb-2 text-cyan-100">
+          <p class="font-semibold mb-2 text-sky-100">
             2. ¿Qué es lo que más te emociona?
           </p>
-          <div class="space-y-2 text-sm text-cyan-100">
+          <div class="space-y-2 text-sm text-sky-100">
             <label class="flex gap-2 items-center">
               <input type="radio" name="q2" value="piscina" />
               <span>Pasar todo el día en piscina y hidromasaje 💦</span>
@@ -444,21 +467,21 @@
 
         <button
           id="btn-jugar"
-          class="w-full md:w-auto btn-fiesta-primary text-slate-900 font-extrabold px-6 py-3 rounded-full text-sm md:text-base uppercase tracking-[0.12em] transition-transform"
+          class="btn-pill btn-primario w-full md:w-auto"
         >
           Ver mi resultado y código ⭐
         </button>
 
-        <div id="resultado-juego" class="hidden mt-4 bg-slate-950/85 border border-cyan-500/50 rounded-xl p-4 text-sm">
-          <p id="texto-resultado" class="mb-2 font-semibold text-cyan-100"></p>
-          <p class="text-cyan-200">
+        <div id="resultado-juego" class="hidden mt-4 bg-slate-900/90 rounded-3xl p-4 text-sm border border-sky-400/50">
+          <p id="texto-resultado" class="mb-2 font-semibold text-sky-100"></p>
+          <p class="text-sky-200">
             Tu código de juego Apikai es:
-            <span class="font-mono font-bold text-yellow-300">APIKAI10</span>  
-            <span class="block mt-1 text-[11px] text-cyan-300/80">
-              Escríbelo en el campo de mensaje del formulario para que sepamos que jugaste 🎉
+            <span class="font-mono font-extrabold text-yellow-300">APIKAI10</span>  
+            <span class="block mt-1 text-[11px] text-sky-300/80">
+              Escríbelo en el mensaje del formulario para que sepamos que jugaste 🎉
             </span>
           </p>
-          <a href="#reservas" class="inline-flex mt-3 text-xs md:text-sm text-cyan-300 hover:text-cyan-100 underline">
+          <a href="#reservas" class="inline-flex mt-3 text-xs md:text-sm text-sky-300 hover:text-sky-100 underline">
             Ir a reservar con mi código →
           </a>
         </div>
@@ -467,14 +490,14 @@
   </section>
 
   <!-- RESERVAS (FORMULARIO NETLIFY) -->
-  <section id="reservas" class="py-14 seccion-gradiente">
+  <section id="reservas" class="py-14 section-soft">
     <div class="max-w-3xl mx-auto px-4">
       <h2 class="text-3xl font-extrabold mb-4 text-center">
         Reserva tu experiencia en Apikai Lodge 📅
       </h2>
-      <p class="text-center text-cyan-100/80 mb-8 text-sm md:text-base">
-        Llena este formulario y cuéntanos qué quieres hacer.  
-        Organizamos desde una tarde sencilla hasta el evento más grande, junto a
+      <p class="text-center text-sky-100/80 mb-8 text-sm md:text-base">
+        Llena este formulario y cuéntanos qué quieres hacer.
+        Nosotros te respondemos por WhatsApp para armar el paquete ideal junto a
         <span class="font-semibold text-amber-300">Gaby Garzón Eventos</span>.
       </p>
 
@@ -483,7 +506,7 @@
         method="POST"
         data-netlify="true"
         action="/gracias.html"
-        class="space-y-4 fiesta-card p-6 rounded-lg shadow-lg"
+        class="card-gomita p-6 space-y-4"
       >
         <input type="hidden" name="form-name" value="reservas-apikai">
 
@@ -492,23 +515,23 @@
         </p>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">Nombre completo</span>
-          <input required type="text" name="nombre" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">Nombre completo</span>
+          <input required type="text" name="nombre" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
         </label>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">WhatsApp de contacto</span>
-          <input required type="text" name="whatsapp" placeholder="+593 9XXXXXXXX" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">WhatsApp de contacto</span>
+          <input required type="text" name="whatsapp" placeholder="+593 9XXXXXXXX" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
         </label>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">Correo electrónico (opcional)</span>
-          <input type="email" name="email" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">Correo electrónico (opcional)</span>
+          <input type="email" name="email" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
         </label>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">Tipo de reserva</span>
-          <select required name="tipo_reserva" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">Tipo de reserva</span>
+          <select required name="tipo_reserva" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
             <option value="">Selecciona una opción</option>
             <option value="tarde_piscina">Tarde de piscina / hidromasaje</option>
             <option value="actividad_deportiva">Actividad deportiva / campeonatos</option>
@@ -523,37 +546,37 @@
         </label>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">Nombre de la organización / iglesia / escuela (si aplica)</span>
-          <input type="text" name="organizacion" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">Nombre de la organización / iglesia / escuela (si aplica)</span>
+          <input type="text" name="organizacion" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
         </label>
 
         <div class="grid md:grid-cols-2 gap-4">
           <label class="block">
-            <span class="text-sm text-cyan-100">Fecha del evento / actividad</span>
-            <input required type="date" name="fecha_evento" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+            <span class="text-sm text-sky-100">Fecha del evento / actividad</span>
+            <input required type="date" name="fecha_evento" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
           </label>
 
           <label class="block">
-            <span class="text-sm text-cyan-100">Horario aproximado</span>
-            <input type="text" name="horario" placeholder="Ej: 14:00 a 18:00" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+            <span class="text-sm text-sky-100">Horario aproximado</span>
+            <input type="text" name="horario" placeholder="Ej: 14:00 a 18:00" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
           </label>
         </div>
 
         <div class="grid md:grid-cols-2 gap-4">
           <label class="block">
-            <span class="text-sm text-cyan-100">Número aproximado de adultos</span>
-            <input required type="number" min="1" name="adultos" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+            <span class="text-sm text-sky-100">Número aproximado de adultos</span>
+            <input required type="number" min="1" name="adultos" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
           </label>
 
           <label class="block">
-            <span class="text-sm text-cyan-100">Número aproximado de niños</span>
-            <input type="number" min="0" name="ninos" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+            <span class="text-sm text-sky-100">Número aproximado de niños</span>
+            <input type="number" min="0" name="ninos" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
           </label>
         </div>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">Espacios que deseas utilizar</span>
-          <select multiple name="espacios[]" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">Espacios que deseas utilizar</span>
+          <select multiple name="espacios[]" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
             <option value="piscinas">Piscinas</option>
             <option value="hidromasaje">Zona hidromasaje</option>
             <option value="areas_deportivas">Áreas deportivas</option>
@@ -561,41 +584,41 @@
             <option value="area_eventos">Zona de eventos al aire libre</option>
             <option value="restaurante_bar">Restaurante / bar deportivo</option>
           </select>
-          <small class="text-[11px] text-cyan-300/80">Puedes seleccionar varias opciones (Ctrl o Cmd + clic).</small>
+          <small class="text-[11px] text-sky-300/80">Puedes seleccionar varias opciones (Ctrl o Cmd + clic).</small>
         </label>
 
-        <fieldset class="border border-cyan-700 rounded p-3">
-          <legend class="text-sm text-cyan-100 font-semibold mb-2">Servicios adicionales</legend>
+        <fieldset class="border border-sky-700 rounded-3xl p-3">
+          <legend class="text-sm text-sky-100 font-semibold mb-2">Servicios adicionales</legend>
 
-          <label class="flex items-center gap-2 text-sm text-cyan-100">
+          <label class="flex items-center gap-2 text-sm text-sky-100">
             <input type="checkbox" name="servicios_adicionales[]" value="decoracion_gaby_garzon">
             <span>Decoración completa con Gaby Garzón Eventos 🎈</span>
           </label>
 
-          <label class="flex items-center gap-2 text-sm text-cyan-100">
+          <label class="flex items-center gap-2 text-sm text-sky-100">
             <input type="checkbox" name="servicios_adicionales[]" value="sonido_musica">
             <span>Sonido / música / animación 🎶</span>
           </label>
 
-          <label class="flex items-center gap-2 text-sm text-cyan-100">
+          <label class="flex items-center gap-2 text-sm text-sky-100">
             <input type="checkbox" name="servicios_adicionales[]" value="alimentacion">
             <span>Alimentación (menú, snacks, bebidas) 🍽️</span>
           </label>
 
-          <label class="flex items-center gap-2 text-sm text-cyan-100">
+          <label class="flex items-center gap-2 text-sm text-sky-100">
             <input type="checkbox" name="servicios_adicionales[]" value="transporte">
             <span>Apoyo con transporte (si aplica) 🚍</span>
           </label>
         </fieldset>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">Presupuesto aproximado (opcional)</span>
-          <input type="text" name="presupuesto" placeholder="Ej: $300 - $800" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">Presupuesto aproximado (opcional)</span>
+          <input type="text" name="presupuesto" placeholder="Ej: $300 - $800" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
         </label>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">¿Cómo te enteraste de Apikai?</span>
-          <select name="como_se_entero" class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm">
+          <span class="text-sm text-sky-100">¿Cómo te enteraste de Apikai?</span>
+          <select name="como_se_entero" class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm">
             <option value="">Selecciona una opción</option>
             <option value="facebook">Facebook</option>
             <option value="instagram">Instagram</option>
@@ -606,18 +629,18 @@
         </label>
 
         <label class="block">
-          <span class="text-sm text-cyan-100">Cuéntanos más sobre lo que necesitas</span>
+          <span class="text-sm text-sky-100">Cuéntanos más sobre lo que necesitas</span>
           <textarea
             name="mensaje"
             rows="4"
-            class="mt-1 block w-full border border-cyan-700 bg-slate-950/60 p-2 rounded text-sm"
-            placeholder="Temática del evento, tipo de música, si jugaste el quiz (código APIKAI10), ideas que tienes, etc."
+            class="mt-1 block w-full border border-sky-700 bg-slate-950/70 p-2 rounded-2xl text-sm"
+            placeholder="Temática del evento, tipo de música, código APIKAI10 del juego, ideas que tienes, etc."
           ></textarea>
         </label>
 
         <button
           type="submit"
-          class="w-full btn-fiesta-primary text-slate-900 font-extrabold py-3 rounded-lg text-sm md:text-base uppercase tracking-[0.14em] transition-transform"
+          class="btn-pill btn-primario w-full"
         >
           Enviar solicitud de reserva 🚀
         </button>
@@ -626,15 +649,15 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="py-10 bg-slate-900/95">
+  <section id="contacto" class="py-10 bg-slate-950">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
       <div>
-        <h2 class="text-2xl font-extrabold mb-3 text-cyan-200">Contacto directo 📲</h2>
-        <p class="text-sm text-cyan-100/80 mb-3">
-          Si prefieres hablar primero, escríbenos por WhatsApp y te contamos cómo armar tu experiencia en Apikai.
+        <h2 class="text-2xl font-extrabold mb-3 text-sky-200">Contacto directo 📲</h2>
+        <p class="text-sm text-sky-100/80 mb-3">
+          Si prefieres escribir antes de llenar todo, aquí nos encuentras.
         </p>
-        <ul class="text-sm text-cyan-100/90 space-y-1 mb-4">
-          <li>📍 Apikai Lodge – Zona amazónica, Ecuador (ajusta dirección exacta)</li>
+        <ul class="text-sm text-sky-100/90 space-y-1 mb-4">
+          <li>📍 Apikai Lodge – Zona amazónica, Ecuador (ajusta la dirección exacta).</li>
           <li>📞 Teléfono / WhatsApp: <span class="font-semibold">+593 9XXXXXXXX</span></li>
           <li>📩 Correo: ejemplo@apikailodge.com</li>
           <li>📘 Facebook: Apikai Lodge</li>
@@ -642,27 +665,27 @@
         <a
           href="https://wa.me/TU_NUMERO_DE_WHATSAPP?text=Hola%20vengo%20de%20la%20web%20de%20Apikai%20Lodge%20y%20quiero%20cotizar%20una%20reserva"
           target="_blank"
-          class="inline-flex items-center gap-2 btn-fiesta-primary text-slate-900 font-extrabold px-5 py-3 rounded-full text-sm transition-transform"
+          class="btn-pill btn-primario inline-flex"
         >
-          Escribir por WhatsApp ahora 💬
+          Escribir por WhatsApp 💬
         </a>
       </div>
 
-      <div class="fiesta-card rounded-xl p-4 text-xs text-cyan-100/80">
+      <div class="card-gomita p-4 text-xs text-sky-100/80">
         <p class="font-semibold mb-2">Ubicación referencial</p>
         <p class="mb-3">
           Aquí puedes incrustar un mapa de Google Maps cuando tengas el enlace exacto del complejo.
         </p>
-        <div class="w-full h-52 rounded-lg bg-slate-900 flex items-center justify-center text-cyan-200 text-center px-4">
-          Mapa de Google Maps (reemplazar este recuadro por el iframe real)
+        <div class="w-full h-52 rounded-3xl bg-slate-900 flex items-center justify-center text-sky-200 text-center px-4">
+          Mapa de Google Maps (reemplazar este recuadro por el iframe real).
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 border-t border-cyan-500/40">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-cyan-300/80">
+  <footer class="bg-slate-950 border-t border-sky-500/40">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-sky-300/80">
       <p>© <span id="year"></span> Apikai Lodge · Complejo acuático & eventos.</p>
       <p>Sitio desarrollado con apoyo de CL Tech Solutions & Gaby Garzón Eventos.</p>
     </div>
@@ -673,16 +696,16 @@
     <a
       href="https://wa.me/TU_NUMERO_DE_WHATSAPP?text=Hola%20vengo%20de%20la%20web%20de%20Apikai%20Lodge%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n"
       target="_blank"
-      class="flex items-center justify-center w-12 h-12 rounded-full bg-green-500 shadow-lg hover:bg-green-400 transition-transform"
+      class="whatsapp-btn"
       aria-label="WhatsApp Apikai Lodge"
     >
-      <span class="font-bold text-white text-xl">W</span>
+      <span class="font-extrabold text-white text-xl">W</span>
     </a>
   </div>
 
   <!-- SCRIPTS -->
   <script>
-    // Año dinámico del footer
+    // Año dinámico
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // Lógica del juego
