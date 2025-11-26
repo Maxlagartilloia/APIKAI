@@ -2,98 +2,83 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gracias por tu reserva | Apikai Lodge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gracias por tu Reserva | Apikai Lodge</title>
 
-  <!-- Fuente y Tailwind -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     body {
-      font-family: "Baloo 2", sans-serif;
       background: radial-gradient(circle at top, #173a63 0, #02101f 40%, #020617 100%);
       color: #f9fafb;
+      font-family: 'Baloo 2', sans-serif;
     }
-    .card-gomita {
+    .card {
       background: linear-gradient(145deg, #050a1f, #060a18);
       border-radius: 26px;
-      border: 2px solid rgba(148, 163, 184, 0.25);
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      border: 2px solid rgba(148,163,184,0.25);
+      box-shadow: 0 16px 40px rgba(15,23,42,0.9);
     }
-    .btn-pill {
+    .btn-wsp {
       border-radius: 999px;
-      padding: 0.8rem 1.6rem;
+      padding: 1rem 1.4rem;
       font-weight: 800;
-      letter-spacing: 0.12em;
-      font-size: 0.75rem;
-      text-transform: uppercase;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #02223c;
+      box-shadow: 0 6px 25px rgba(37,211,102,0.6);
+      transition: 0.2s;
     }
-    .btn-primario {
-      background: linear-gradient(135deg, #ffd65a, #ff9b4a);
-      color: #0f172a;
-      box-shadow: 0 8px 25px rgba(255,195,90,0.6);
-    }
-    .btn-secundario {
-      border: 1px solid #38bdf8;
-      color: #e5f2ff;
-      background: #020617;
+    .btn-wsp:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
     }
   </style>
 </head>
-<body class="min-h-screen flex items-center justify-center px-4">
 
-  <div class="max-w-lg w-full card-gomita p-8 text-center space-y-5">
-    <div class="flex justify-center">
-      <div class="w-16 h-16 rounded-full bg-emerald-400 flex items-center justify-center text-slate-900 text-3xl">
-        <i class="fa-solid fa-check"></i>
-      </div>
-    </div>
+<body class="min-h-screen flex items-center justify-center p-6">
 
-    <h1 class="text-3xl font-extrabold">¡Gracias por tu solicitud! 🎉</h1>
+  <div class="card max-w-xl mx-auto p-10 text-center">
+    
+    <h1 class="text-3xl font-extrabold mb-4 text-amber-300">
+      ¡Gracias por tu solicitud! 🎉
+    </h1>
 
-    <p class="text-sm text-sky-100/90">
-      Hemos recibido tu formulario para visitar o hacer tu evento en <b>Apikai Lodge</b>.
-      En poco tiempo uno de nuestros colaboradores te escribirá por WhatsApp
-      desde los números:
+    <p class="text-sky-100/90 text-base leading-relaxed mb-6">
+      Hemos recibido tu información y en pocos minutos nos pondremos en contacto contigo para coordinar todos los detalles de tu reserva o cotización.
+      <br><br>
+      Mientras tanto, puedes escribirnos directamente por WhatsApp para una respuesta más rápida:
     </p>
 
-    <p class="text-sm text-amber-300">
-      <b>0999630862</b> · <b>0992004343</b>
+    <!-- BOTÓN WHATSAPP 1 -->
+    <a href="https://wa.me/593999630862?text=Hola%20Apikai%20Lodge,%20acabo%20de%20enviar%20mi%20formulario%20y%20quiero%20reservar%20o%20consultar%20más%20detalles.%20¿Me%20pueden%20ayudar%3F"
+       target="_blank"
+       class="btn-wsp w-full justify-center mb-4">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      Escribir al 0999630862
+    </a>
+
+    <!-- BOTÓN WHATSAPP 2 -->
+    <a href="https://wa.me/593992004343?text=Hola%20Apikai%20Lodge,%20acabo%20de%20enviar%20mi%20formulario%20y%20quiero%20reservar%20o%20consultar%20más%20información.%20Gracias."
+       target="_blank"
+       class="btn-wsp w-full justify-center">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      Escribir al 0992004343
+    </a>
+
+    <p class="text-xs text-sky-200/60 mt-8">
+      © <span id="year"></span> Apikai Lodge · Amazonía Ecuatoriana
     </p>
 
-    <p class="text-xs text-sky-300/80">
-      Te ayudaremos a definir la fecha, tipo de evento, menú y todos los detalles para que
-      tu grupo viva un día increíble en la Amazonía.
-    </p>
-
-    <div class="space-y-3 mt-4">
-      <a href="https://wa.me/593999630862"
-         target="_blank"
-         class="inline-flex items-center justify-center gap-2 btn-pill btn-primario w-full">
-        <i class="fa-brands fa-whatsapp text-xl"></i>
-        Escribir ahora por WhatsApp
-      </a>
-
-      <a href="/"
-         class="inline-flex items-center justify-center gap-2 btn-pill btn-secundario w-full">
-        <i class="fa-solid fa-water"></i>
-        Volver al sitio principal
-      </a>
-    </div>
-
-    <p class="text-[11px] text-sky-400/80 mt-4">
-      Si te equivocaste en algún dato, puedes enviar un nuevo formulario desde la página principal.
-    </p>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
