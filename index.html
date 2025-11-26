@@ -6,7 +6,7 @@
   <title>Apikai Lodge | Parque Acuático Amazónico</title>
 
   <!-- SEO -->
-  <meta name="description" content="Apikai Lodge es un parque acuático amazónico ubicado en la vía Miss Ecuador, a 12 km de Shushufindi. Piscinas, hidromasaje, áreas deportivas, cevichería y platos a la carta, coliseo para eventos y producción completa de Gaby Garzón Eventos.">
+  <meta name="description" content="Apikai Lodge es un parque acuático amazónico ubicado en la vía Miss Ecuador, a 12 km de Shushufindi. Piscinas, hidromasaje, áreas deportivas, cevichería, platos a la carta, coliseo para eventos y producción con Gaby Garzón Eventos.">
   <meta name="author" content="Apikai Lodge & Gaby Garzón Eventos">
 
   <!-- Google Font estilo cartoon -->
@@ -17,11 +17,10 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome para iconos -->
+  <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" />
 
   <style>
     :root {
@@ -69,6 +68,7 @@
       box-shadow: 0 8px 25px rgba(255,195,90,0.6);
       transition: 0.2s;
     }
+
     .btn-primario:hover {
       filter: brightness(1.05);
       transform: translateY(-2px);
@@ -83,35 +83,28 @@
 
     .gallery-img {
       border-radius: 22px;
-      transition: 0.2s;
+      transition: 0.3s;
       box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+      cursor: pointer;
     }
     .gallery-img:hover {
-      transform: translateY(-4px) rotate(-1deg);
+      transform: translateY(-4px) scale(1.02);
       filter: brightness(1.05);
     }
 
-    .whatsapp-floating {
-      position: fixed;
-      right: 1.25rem;
-      bottom: 1.25rem;
-      z-index: 50;
+    .surf-bg {
+      background: radial-gradient(circle at top, rgba(76,194,255,0.4), transparent 55%),
+                  radial-gradient(circle at bottom, rgba(110,231,183,0.3), transparent 55%),
+                  #020617;
     }
-    .whatsapp-btn {
-      width: 3.4rem;
-      height: 3.4rem;
-      background: #22c55e;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 15px 40px rgba(22,163,74,0.9);
-      color: white;
-      font-size: 1.7rem;
-      transition: 0.2s;
+
+    /* ANIMACIÓN FLOAT */
+    @keyframes floatZoom {
+      0% { transform: scale(0.9) translateY(10px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
     }
-    .whatsapp-btn:hover {
-      transform: translateY(-3px) scale(1.05);
+    .animate-floatZoom {
+      animation: floatZoom 0.35s ease-out;
     }
   </style>
 </head>
@@ -121,212 +114,181 @@
 <!-- NAVBAR -->
 <header class="sticky top-0 z-50 nav-blur">
   <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+
     <div class="flex items-center gap-3">
-      <img src="apikai-logo.png" class="w-12 h-12 rounded-full border-2 border-sky-400" alt="Logo Apikai Lodge" />
+      <!-- LOGO DOBLE DE GRANDE -->
+      <img src="apikai-logo.png"
+           class="w-24 h-24 rounded-full border-2 border-sky-400 shadow-xl"
+           alt="Logo Apikai Lodge" />
       <div>
-        <p class="font-extrabold text-lg">Apikai Lodge</p>
-        <p class="text-[11px] text-sky-300 tracking-wider">Parque Acuático · Amazonía</p>
+        <p class="font-extrabold text-2xl">Apikai Lodge</p>
+        <p class="text-[12px] text-sky-300 tracking-wider">Parque Acuático · Amazonía</p>
       </div>
     </div>
 
-    <div class="hidden md:flex items-center gap-6 text-[13px] font-semibold">
+    <div class="hidden md:flex items-center gap-6 text-[14px] font-semibold">
       <a href="#inicio" class="hover:text-sky-300">Inicio</a>
       <a href="#galeria" class="hover:text-sky-300">Galería</a>
       <a href="#contacto" class="hover:text-sky-300">Contacto</a>
     </div>
 
     <a href="#reservas" class="hidden md:inline-flex btn-pill btn-primario">
-      PLANIFICAR VISITA
+      RESERVAR
     </a>
 
-    <a href="#reservas" class="md:hidden text-[11px] border border-sky-400 px-3 py-1 rounded-full bg-slate-900/80">
-      Visitar
-    </a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section id="inicio" class="hero-bg min-h-[80vh] flex items-center px-4 py-20">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+    
     <div class="space-y-6">
       <div class="inline-flex items-center gap-2 bg-emerald-300 text-slate-900 px-4 py-1 rounded-full text-xs font-bold">
         💦 Piscinas · 🌴 Amazonía · 🍤 Cevichería
       </div>
 
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-        Diversión amazónica en <span class="text-sky-300">Shushufindi</span>.
+      <h1 class="text-5xl font-extrabold leading-tight">
+        Vive el paraíso amazónico en <span class="text-sky-300">Apikai Lodge</span>.
       </h1>
 
-      <p class="text-sky-100/95 text-sm md:text-base">
-        Parque acuático ubicado en la vía Miss Ecuador, a 12 km de Shushufindi.  
-        Piscinas, hidromasaje, áreas deportivas, cevichería, platos a la carta y
-        coliseo para que tu grupo viva un día completo en la Amazonía ecuatoriana.
-      </p>
-
-      <p class="text-sky-100/95 text-sm md:text-base">
-        Aquí puedes hacer desde un paseo familiar hasta fiestas, cumpleaños, integraciones,
-        shows, conciertos y grandes eventos producidos por
-        <b>Gaby Garzón Eventos</b>.
+      <p class="text-sky-100/95 text-base">
+        Un parque acuático en la Amazonía ecuatoriana: piscinas, hidromasaje,
+        áreas deportivas, cevichería, platos a la carta y un coliseo para tus
+        eventos más importantes.
       </p>
 
       <div class="flex gap-3 flex-wrap mt-4">
-        <a href="#reservas" class="btn-pill btn-primario">Reservar 🤩</a>
-        <a href="#galeria" class="btn-pill border border-sky-400 text-sky-200">Ver fotos 📸</a>
-        <a href="#juego" class="btn-pill bg-rose-500 text-white">Jugar 🎮</a>
+        <a href="#reservas" class="btn-pill btn-primario">Reservar Ahora 🤩</a>
+        <a href="#galeria" class="btn-pill border border-sky-400 text-sky-200">Fotos 📸</a>
+        <a href="#surf" class="btn-pill bg-sky-500 text-slate-900">Olas de diversión 🌊</a>
       </div>
     </div>
 
-    <div class="card-gomita p-6 space-y-3">
-      <h2 class="text-xl md:text-2xl text-amber-300 font-extrabold">
-        Paraíso amazónico para tus eventos 🌿
-      </h2>
-
-      <ul class="text-sm text-sky-100 space-y-1">
-        <li>💧 Piscinas & hidromasaje para toda la familia.</li>
-        <li>⚽ Áreas deportivas para campeonatos e integraciones.</li>
-        <li>🏟️ Coliseo para ~300 personas para shows y celebraciones.</li>
-        <li>🍤 Cevichería y platos a la carta al estilo Oriente.</li>
-        <li>🎊 Decoración y producción con Gaby Garzón Eventos.</li>
-        <li>🎉 Ideal para cumpleaños, bautizos, bodas, graduaciones y conciertos.</li>
-      </ul>
-
-      <a href="#reservas" class="btn-pill btn-primario block text-center mt-4">
-        Solicitar información ✉️
-      </a>
-      <p class="text-[11px] text-sky-300/90 text-center">
-        Te contactaremos por WhatsApp para armar el paquete perfecto.
-      </p>
-    </div>
   </div>
 </section>
 
 <!-- EXPERIENCIAS -->
 <section class="py-14 bg-slate-950">
   <div class="max-w-6xl mx-auto px-4">
+
     <h2 class="text-3xl font-extrabold text-center mb-6">Experiencias en Apikai 🌴</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
+
       <div class="card-gomita p-5">
-        <img src="apikai-piscinas.jpg" class="rounded-3xl h-40 w-full object-cover mb-4" alt="Piscinas Apikai Lodge" />
+        <img src="apikai-piscinas.jpg" class="gallery-img h-40 w-full object-cover mb-4" />
         <h3 class="text-lg font-semibold text-sky-200 mb-2">Piscinas & Hidromasaje</h3>
-        <p class="text-sky-100/90 text-sm">
-          Aguas frescas en clima amazónico, ambiente familiar y diversión todo el día.
-        </p>
+        <p class="text-sky-100/90 text-sm">Agua cristalina, clima amazónico y diversión garantizada.</p>
       </div>
 
       <div class="card-gomita p-5">
-        <img src="apikai-deportes.jpg" class="rounded-3xl h-40 w-full object-cover mb-4" alt="Áreas deportivas Apikai Lodge" />
+        <img src="apikai-deportes.jpg" class="gallery-img h-40 w-full object-cover mb-4" />
         <h3 class="text-lg font-semibold text-emerald-200 mb-2">Áreas Deportivas</h3>
-        <p class="text-sky-100/90 text-sm">
-          Fútbol, vóley e integraciones para grupos, colegios, iglesias y empresas.
-        </p>
+        <p class="text-sky-100/90 text-sm">Fútbol, vóley, campeonatos e integraciones.</p>
       </div>
 
       <div class="card-gomita p-5">
-        <img src="apikai-coliseo.jpg" class="rounded-3xl h-40 w-full object-cover mb-4" alt="Coliseo Apikai Lodge" />
-        <h3 class="text-lg font-semibold text-rose-200 mb-2">Coliseo para Eventos</h3>
-        <p class="text-sky-100/90 text-sm">
-          Espacio techado para ~300 personas. Perfecto para fiestas grandes, conciertos,
-          festivales, graduaciones y celebraciones especiales.
-        </p>
+        <img src="apikai-coliseo.jpg" class="gallery-img h-40 w-full object-cover mb-4" />
+        <h3 class="text-lg font-semibold text-rose-200 mb-2">Coliseo 300 personas</h3>
+        <p class="text-sky-100/90 text-sm">Perfecto para eventos, fiestas, shows y celebraciones.</p>
       </div>
+
     </div>
+  </div>
+</section>
+
+<!-- SURF / OLAS -->
+<section id="surf" class="py-14 surf-bg">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+
+    <div class="space-y-4">
+      <h2 class="text-3xl font-extrabold text-sky-100">Olas de Diversión 🌊</h2>
+      <p class="text-sky-100/90 text-sm md:text-base">
+        Imagina tu grupo disfrutando piscinas, comida, deportes, música y un cierre espectacular.
+      </p>
+
+      <ul class="text-sky-100/85 text-sm space-y-2">
+        <li>🌊 Piscinas y juegos acuáticos.</li>
+        <li>🏄 Actividades deportivas y dinámicas.</li>
+        <li>🍤 Cevichería y platos a la carta.</li>
+        <li>🎉 Fiestas, shows y celebraciones especiales.</li>
+      </ul>
+
+      <a href="#reservas" class="btn-pill btn-primario mt-4">Quiero un día de Surf 🤙</a>
+    </div>
+
+    <div class="card-gomita p-5">
+      <p class="text-sm text-sky-100">
+        Ideas de decoración y eventos los encuentras en nuestros TikTok:
+      </p>
+
+      <div class="flex flex-wrap gap-3 mt-4">
+
+        <a href="https://www.tiktok.com/@apikairegalodedios_4?_r=1&_t=ZM-91i8KLubcG8"
+           target="_blank"
+           class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-800 text-sky-200">
+          <i class="fa-brands fa-tiktok text-xl"></i> TikTok Apikai
+        </a>
+
+        <a href="https://www.tiktok.com/@gabygarzon_eventos?_r=1&_t=ZM-91i85uavn32"
+           target="_blank"
+           class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-800 text-sky-200">
+          <i class="fa-brands fa-tiktok text-xl"></i> TikTok Gaby Garzón
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
 <!-- GASTRONOMÍA -->
 <section class="py-14 bg-slate-900">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+
     <div class="space-y-4">
       <h2 class="text-3xl font-extrabold text-amber-300">Cevichería & Platos a la Carta 🍤</h2>
-      <p class="text-sky-100/90 text-sm">
-        En Apikai también se disfruta comiendo. Platos preparados al momento con sabor
-        amazónico y cevichería para refrescar la tarde.
-      </p>
-      <ul class="text-sky-100/80 text-sm space-y-2">
-        <li>🍤 Ceviches preparados al instante.</li>
-        <li>🍽️ Platos a la carta con sabor oriental.</li>
-        <li>👨‍👩‍👧‍👦 Opciones para grupos y eventos.</li>
-      </ul>
-      <a href="#reservas" class="btn-pill btn-primario inline-flex mt-3">Consultar menú 🍽️</a>
+      <p class="text-sky-100/90 text-sm">Sabor amazónico en cada plato.</p>
+      <a href="#reservas" class="btn-pill btn-primario">Consultar Menú 🍽️</a>
     </div>
 
     <div class="grid grid-cols-2 gap-4">
-      <img src="apikai-ceviches.jpg" class="gallery-img h-32 w-full object-cover" alt="Ceviches en Apikai Lodge">
-      <img src="apikai-restaurant.jpg" class="gallery-img h-32 w-full object-cover" alt="Platos a la carta Apikai Lodge">
-      <img src="apikai-snacks.jpg" class="gallery-img h-32 w-full object-cover" alt="Platos servidos Apikai Lodge">
-      <img src="apikai-bar.jpg" class="gallery-img h-32 w-full object-cover" alt="Área de comedor Apikai Lodge">
+      <img src="apikai-ceviches.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-restaurant.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-snacks.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-bar.jpg" class="gallery-img h-32 w-full object-cover">
     </div>
+
   </div>
 </section>
 
 <!-- GALERÍA -->
 <section id="galeria" class="py-14 bg-slate-950">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-extrabold text-center mb-2">Galería 📸</h2>
-    <p class="text-center text-sm text-sky-100/90 mb-8">
-      Mira cómo la gente disfruta sus días y eventos en Apikai.
-    </p>
+
+    <h2 class="text-3xl font-extrabold text-center mb-4">Galería 📸</h2>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="apikai-galeria-1.jpg" class="gallery-img h-32 w-full object-cover" alt="">
-      <img src="apikai-galeria-2.jpg" class="gallery-img h-32 w-full object-cover" alt="">
-      <img src="apikai-galeria-3.jpg" class="gallery-img h-32 w-full object-cover" alt="">
-      <img src="apikai-galeria-4.jpg" class="gallery-img h-32 w-full object-cover" alt="">
-      <img src="apikai-galeria-5.jpg" class="gallery-img h-32 w-full object-cover" alt="">
-      <img src="apikai-galeria-6.jpg" class="gallery-img h-32 w-full object-cover" alt="">
-      <img src="apikai-galeria-7.jpg" class="gallery-img h-32 w-full object-cover" alt="">
-      <img src="apikai-galeria-8.jpg" class="gallery-img h-32 w-full object-cover" alt="">
+      <img src="apikai-galeria-1.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-galeria-2.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-galeria-3.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-galeria-4.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-galeria-5.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-galeria-6.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-galeria-7.jpg" class="gallery-img h-32 w-full object-cover">
+      <img src="apikai-galeria-8.jpg" class="gallery-img h-32 w-full object-cover">
     </div>
-  </div>
-</section>
 
-<!-- JUEGO -->
-<section id="juego" class="py-14 bg-slate-900">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-extrabold text-center mb-2">Juego para visitantes 🎮</h2>
-    <p class="text-center text-sm text-sky-100/80 mb-6">
-      Descubre qué tipo de plan Apikai va contigo y luego reserva.
-    </p>
-
-    <div class="card-gomita p-6 space-y-4">
-      <div>
-        <p class="font-semibold text-sky-100 mb-2">1. ¿Con quién vienes?</p>
-        <label><input type="radio" name="q1" value="familia"> Familia 👨‍👩‍👧‍👦</label><br>
-        <label><input type="radio" name="q1" value="amigos"> Amigos 😎</label><br>
-        <label><input type="radio" name="q1" value="iglesia"> Iglesia 🙏</label><br>
-        <label><input type="radio" name="q1" value="escuela"> Escuela 🎒</label><br>
-        <label><input type="radio" name="q1" value="empresa"> Empresa 🏢</label>
-      </div>
-
-      <div>
-        <p class="font-semibold text-sky-100 mb-2">2. ¿Qué te emociona más?</p>
-        <label><input type="radio" name="q2" value="piscina"> Piscina 💦</label><br>
-        <label><input type="radio" name="q2" value="deporte"> Deporte ⚽</label><br>
-        <label><input type="radio" name="q2" value="evento"> Evento decorado 🎈</label><br>
-        <label><input type="radio" name="q2" value="show"> Show o concierto 🎤</label>
-      </div>
-
-      <button id="btn-jugar" class="btn-pill btn-primario">Ver mi resultado ⭐</button>
-
-      <div id="resultado-juego" class="hidden bg-slate-900/90 p-4 rounded-3xl border border-sky-400/40">
-        <p id="texto-resultado" class="text-sky-100 mb-2"></p>
-        <p class="text-sky-300 text-sm">
-          Usa tu resultado como referencia en el formulario de reservas.
-        </p>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- FORMULARIO -->
 <section id="reservas" class="py-14 bg-slate-950">
   <div class="max-w-3xl mx-auto px-4">
+
     <h2 class="text-3xl font-extrabold text-center mb-4">Reservas & Cotizaciones 📅</h2>
-    <p class="text-center text-sm text-sky-100/80 mb-8">
-      Llena el formulario y te contactaremos por WhatsApp para organizar tu fiesta,
-      paseo o gran evento en Apikai.
-    </p>
 
     <form
       name="reservas-apikai"
@@ -358,178 +320,157 @@
           <option value="">Selecciona…</option>
           <option value="tarde_piscina">Tarde de piscina</option>
           <option value="actividad_deportiva">Actividad deportiva</option>
-          <option value="evento_social_gaby_garzon">Evento social (cumpleaños, bodas, bautizos, etc.)</option>
+          <option value="evento_social_gaby_garzon">Evento social</option>
           <option value="concierto_show">Show o concierto</option>
           <option value="retiro_iglesia">Retiro de iglesia</option>
-          <option value="visita_escolar">Visita o paseo escolar</option>
-          <option value="empresa_organizacion">Evento empresarial / integración</option>
+          <option value="visita_escolar">Visita escolar</option>
+          <option value="empresa_organizacion">Evento empresarial</option>
           <option value="uso_coliseo">Uso del coliseo</option>
         </select>
       </label>
 
       <label>
-        <span>Fecha</span>
+        <span>Fecha del evento</span>
         <input type="date" name="fecha_evento" required class="w-full p-2 bg-slate-900 border border-sky-700 rounded-xl mt-1">
       </label>
 
       <label>
-        <span>Mensaje (cuéntanos tu idea de evento)</span>
+        <span>Mensaje</span>
         <textarea name="mensaje" rows="4" class="w-full p-2 bg-slate-900 border border-sky-700 rounded-xl mt-1"></textarea>
       </label>
 
       <button type="submit" class="btn-pill btn-primario w-full">Enviar solicitud 🚀</button>
+
     </form>
+
   </div>
 </section>
-<!-- CONTACTO + ENLACES -->
+
+<!-- CONTACTO -->
 <section id="contacto" class="py-14 bg-slate-900">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
 
-    <!-- COLUMNA IZQUIERDA -->
     <div>
       <h2 class="text-2xl font-extrabold mb-4 text-sky-200">Contacto directo</h2>
 
       <ul class="text-sm text-sky-100 space-y-2 mb-6 leading-relaxed">
         <li>📍 Vía Miss Ecuador, a 12 km de Shushufindi.</li>
-
-        <li>📞 WhatsApp / Llamadas:<br>
+        <li>📞 Teléfonos:<br>
           <b class="text-amber-300">0999630862</b><br>
           <b class="text-amber-300">0992004343</b>
         </li>
-
-        <li>📘 Facebook: Apikai Lodge</li>
-
-        <li>🎉 Ideal para fiestas, cumpleaños, bodas, bautizos, graduaciones,
-            integraciones, shows, conciertos y todo tipo de celebraciones.
-        </li>
       </ul>
 
-      <h3 class="font-semibold text-sky-200 text-sm mb-3">
-        Ver más de Apikai y Gaby Garzón Eventos:
-      </h3>
+      <div class="flex flex-wrap gap-3">
 
-      <div class="flex flex-wrap gap-3 text-xs">
-
-        <!-- MAPS -->
         <a href="https://maps.app.goo.gl/pG3ebMvo7drzxAjz9?g_st=ic"
            target="_blank"
-           class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-800 hover:bg-slate-700 transition text-sky-200 text-sm">
+           class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800 rounded-full text-sky-200">
           <i class="fa-solid fa-location-dot text-green-400 text-xl"></i>
-          Ubicación en Google Maps
+          Google Maps
         </a>
 
-        <!-- FACEBOOK -->
         <a href="https://www.facebook.com/profile.php?id=100092321450938"
            target="_blank"
-           class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-800 hover:bg-slate-700 transition text-sky-200 text-sm">
+           class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800 rounded-full text-sky-200">
           <i class="fa-brands fa-facebook text-blue-400 text-xl"></i>
-          Facebook Apikai Lodge
+          Facebook Apikai
         </a>
+
       </div>
 
-      <div class="flex flex-wrap gap-3 text-xs mt-3">
+      <div class="flex flex-wrap gap-3 mt-4">
 
-        <!-- TIKTOK APIKAI -->
         <a href="https://www.tiktok.com/@apikairegalodedios_4?_r=1&_t=ZM-91i8KLubcG8"
            target="_blank"
-           class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-800 hover:bg-slate-700 transition text-sky-200 text-sm">
+           class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800 rounded-full text-sky-200">
           <i class="fa-brands fa-tiktok text-xl"></i>
-          TikTok Apikai (videos del parque)
+          TikTok Apikai
         </a>
 
-        <!-- TIKTOK GABY -->
         <a href="https://www.tiktok.com/@gabygarzon_eventos?_r=1&_t=ZM-91i85uavn32"
            target="_blank"
-           class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-800 hover:bg-slate-700 transition text-sky-200 text-sm">
+           class="inline-flex items-center gap-2 px-3 py-2 bg-slate-800 rounded-full text-sky-200">
           <i class="fa-brands fa-tiktok text-xl"></i>
-          TikTok Gaby Garzón Eventos
+          TikTok Gaby Garzón
         </a>
 
       </div>
 
-      <p class="text-[11px] text-sky-300/80 mt-4">
-        (Pronto más enlaces oficiales)
-      </p>
     </div>
 
-    <!-- COLUMNA DERECHA: MAPA REAL -->
     <div class="card-gomita p-4">
-      <p class="font-semibold mb-2 text-sky-200 text-sm">Ubicación</p>
-
+      <p class="font-semibold text-sky-200 text-sm mb-2">Ubicación en mapa</p>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.62479972271!2d-76.64969292427336!3d-0.17470393543004665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d6aac46c5ee79b%3A0x5e30f68bf48e1c16!2sApikai%20Regalo%20de%20Dios!5e0!3m2!1ses-419!2sec!4v1700950000000!5m2!1ses-419!2ec"
         width="100%"
         height="280"
-        style="border:0; border-radius: 18px;"
-        allowfullscreen=""
+        style="border:0; border-radius: 20px;"
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
+        allowfullscreen>
       </iframe>
-
     </div>
 
   </div>
 </section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox"
+     class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 px-4">
+  <button id="lightbox-close"
+          class="absolute top-4 right-4 bg-slate-900/80 border border-sky-400 text-sky-100 rounded-full w-10 h-10 flex items-center justify-center text-xl">
+    ✕
+  </button>
+
+  <img id="lightbox-img"
+       src=""
+       class="max-h-[80vh] max-w-[90vw] rounded-3xl shadow-2xl border border-sky-400/60 animate-floatZoom">
+</div>
+
 <!-- FOOTER -->
 <footer class="bg-slate-950 border-t border-sky-700/30">
-  <div class="max-w-6xl mx-auto px-4 py-6 grid md:grid-cols-3 gap-6 text-xs text-sky-300">
-    <div>
-      <h3 class="font-bold text-sky-200">Apikai Lodge</h3>
-      <p>Parque acuático amazónico para familias, grupos y eventos.</p>
-    </div>
-    <div>
-      <h3 class="font-bold text-sky-200">Horarios referenciales</h3>
-      <p>Lunes–Viernes: 10h00–18h00</p>
-      <p>Fines de semana y feriados: 09h00–19h00</p>
-    </div>
-    <div>
-      <h3 class="font-bold text-sky-200">Producción</h3>
-      <p>Eventos: <b>Gaby Garzón Eventos</b></p>
-      <p>Web & automatización: <b>CL Tech Solutions</b></p>
-    </div>
-  </div>
-  <p class="text-center text-[11px] text-sky-400 py-2">
+  <p class="text-center text-[11px] text-sky-400 py-4">
     © <span id="year"></span> Apikai Lodge · Amazonía Ecuatoriana
   </p>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
 <div class="whatsapp-floating">
-  <a href="https://wa.me/593999630862" target="_blank" class="whatsapp-btn" aria-label="WhatsApp Apikai Lodge">
+  <a href="https://wa.me/593999630862" target="_blank" class="whatsapp-btn">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 </div>
 
-<!-- SCRIPT -->
+<!-- SCRIPT FINAL -->
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  document.getElementById("btn-jugar").addEventListener("click", () => {
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    if (!q1 || !q2) { alert("Responde ambas preguntas 🙂"); return; }
+  // LIGHTBOX
+  const lightbox = document.getElementById("lightbox");
+  const imgLightbox = document.getElementById("lightbox-img");
+  const closeLightbox = document.getElementById("lightbox-close");
+  const galleryImages = document.querySelectorAll(".gallery-img");
 
-    let msg = "";
-    if (q1.value === "familia") {
-      if (q2.value === "piscina") msg = "Tu plan perfecto es una tarde de piscina en familia con cevichería incluida 😍";
-      else if (q2.value === "evento") msg = "Un cumpleaños o bautizo decorado en Apikai es ideal para tu familia 🎈";
-      else msg = "Un día completo en Apikai con familia, juegos y comida a la carta es para ti 👨‍👩‍👧‍👦";
-    } else if (q1.value === "amigos") {
-      if (q2.value === "piscina") msg = "Plan panas: piscina todo el día y buena comida amazónica 😎";
-      else if (q2.value === "show") msg = "Show o concierto con tus amigos en el coliseo de Apikai 🔥";
-      else msg = "Una integración con juegos, deportes y comida es tu mejor opción con amigos.";
-    } else if (q1.value === "iglesia") {
-      msg = "Retiro o convivencia de iglesia con espacios amplios, piscina y naturaleza 🙏";
-    } else if (q1.value === "escuela") {
-      msg = "Paseo escolar amazónico con deportes, piscina y cevichería para los profes 😄";
-    } else if (q1.value === "empresa") {
-      msg = "Integración empresarial con actividades deportivas, piscina y un buen almuerzo a la carta 💼";
-    } else {
-      msg = "Apikai tiene un poco de todo para tu grupo: piscina, deportes, comida y eventos especiales.";
+  galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+      imgLightbox.src = img.src;
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+
+      imgLightbox.classList.remove("animate-floatZoom");
+      void imgLightbox.offsetWidth;
+      imgLightbox.classList.add("animate-floatZoom");
+    });
+  });
+
+  closeLightbox.addEventListener("click", () => {
+    lightbox.classList.add("hidden");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.add("hidden");
     }
-
-    document.getElementById("texto-resultado").textContent = msg;
-    document.getElementById("resultado-juego").classList.remove("hidden");
   });
 </script>
 
