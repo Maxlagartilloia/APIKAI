@@ -1,41 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>¡Gracias por reservar en Apikai Lodge!</title>
+  <meta charset="UTF-8">
+  <title>Gracias por tu reserva | Apikai Lodge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fuente y Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: "Baloo 2", sans-serif;
+      background: radial-gradient(circle at top, #173a63 0, #02101f 40%, #020617 100%);
+      color: #f9fafb;
+    }
+    .card-gomita {
+      background: linear-gradient(145deg, #050a1f, #060a18);
+      border-radius: 26px;
+      border: 2px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+    }
+    .btn-pill {
+      border-radius: 999px;
+      padding: 0.8rem 1.6rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+    .btn-primario {
+      background: linear-gradient(135deg, #ffd65a, #ff9b4a);
+      color: #0f172a;
+      box-shadow: 0 8px 25px rgba(255,195,90,0.6);
+    }
+    .btn-secundario {
+      border: 1px solid #38bdf8;
+      color: #e5f2ff;
+      background: #020617;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-slate-950 flex items-center justify-center">
-  <div class="max-w-md mx-auto bg-slate-900/90 border border-cyan-500/50 rounded-2xl p-8 text-center shadow-2xl">
-    <h1 class="text-2xl font-extrabold text-yellow-300 mb-3">
-      ¡Gracias por registrarte a esta linda experiencia! 🎉
-    </h1>
-    <p class="text-sm text-cyan-100 mb-2">
-      Hemos recibido tu solicitud de reserva en <span class="font-semibold">Apikai Lodge</span>.
-    </p>
-    <p class="text-sm text-cyan-100 mb-4">
-      En los próximos minutos un miembro del equipo te escribirá por WhatsApp para confirmar
-      detalles, revisar horarios y armar el paquete perfecto para tu grupo.
-    </p>
-    <p class="text-xs text-cyan-300 mb-6">
-      Si jugaste el quiz y pusiste tu código, también lo veremos en tu mensaje 😉
+<body class="min-h-screen flex items-center justify-center px-4">
+
+  <div class="max-w-lg w-full card-gomita p-8 text-center space-y-5">
+    <div class="flex justify-center">
+      <div class="w-16 h-16 rounded-full bg-emerald-400 flex items-center justify-center text-slate-900 text-3xl">
+        <i class="fa-solid fa-check"></i>
+      </div>
+    </div>
+
+    <h1 class="text-3xl font-extrabold">¡Gracias por tu solicitud! 🎉</h1>
+
+    <p class="text-sm text-sky-100/90">
+      Hemos recibido tu formulario para visitar o hacer tu evento en <b>Apikai Lodge</b>.
+      En poco tiempo uno de nuestros colaboradores te escribirá por WhatsApp
+      desde los números:
     </p>
 
-    <a
-      href="/"
-      class="inline-flex mb-3 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-bold px-5 py-3 rounded-full text-sm uppercase tracking-[0.14em] transition"
-    >
-      Volver al sitio
-    </a>
+    <p class="text-sm text-amber-300">
+      <b>0999630862</b> · <b>0992004343</b>
+    </p>
 
-    <a
-      href="https://wa.me/TU_NUMERO_DE_WHATSAPP?text=Hola%20acabo%20de%20enviar%20mi%20reserva%20desde%20la%20web%20de%20Apikai%20Lodge"
-      target="_blank"
-      class="block text-xs text-cyan-300 hover:text-cyan-100 underline mt-2"
-    >
-      También puedo escribir por WhatsApp ahora mismo →
-    </a>
+    <p class="text-xs text-sky-300/80">
+      Te ayudaremos a definir la fecha, tipo de evento, menú y todos los detalles para que
+      tu grupo viva un día increíble en la Amazonía.
+    </p>
+
+    <div class="space-y-3 mt-4">
+      <a href="https://wa.me/593999630862"
+         target="_blank"
+         class="inline-flex items-center justify-center gap-2 btn-pill btn-primario w-full">
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        Escribir ahora por WhatsApp
+      </a>
+
+      <a href="/"
+         class="inline-flex items-center justify-center gap-2 btn-pill btn-secundario w-full">
+        <i class="fa-solid fa-water"></i>
+        Volver al sitio principal
+      </a>
+    </div>
+
+    <p class="text-[11px] text-sky-400/80 mt-4">
+      Si te equivocaste en algún dato, puedes enviar un nuevo formulario desde la página principal.
+    </p>
   </div>
+
 </body>
 </html>
